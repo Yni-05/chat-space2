@@ -2,8 +2,12 @@
   .side-header
     .side-header__box
       .side-header__box__user-name
+        yanai
       .side-header__box__menu
         .side-header__box__menu__new-group
+          = link_to "#", class: "top-items__icon-btn" do
+            = icon('fas', 'edit')
         .side-header__box__menu__edit-user
-
+          = link_to "#", class: "top-items__icon-btn" do
+            = icon('fas', 'cog')
   .groups
