@@ -9,9 +9,15 @@
           yanai
     
     .main-header__edit-btn
-      = link_to "Edit", class: "edit-link-btn" 
+      = link_to "Edit", class: "edit-link-btn"
   .messages
     まだメッセージがありません
 
   .form
-    .form__mask
+    .form__message
+      .form__mask
+        .form__mask__image
+          .icon
+          .hidden
+      .form__submit
+        Send
