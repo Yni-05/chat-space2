@@ -56,4 +56,4 @@ gem 'pg'
 gem 'haml-rails'
 gem 'font-awesome-sass'
 
-# gem 'therubyracer'
+gem 'devise'
