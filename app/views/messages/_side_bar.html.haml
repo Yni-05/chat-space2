@@ -8,8 +8,8 @@
           = link_to "#", class: "top-items__icon-btn" do
             = icon('fas', 'edit')
         .side-header__box__menu__edit-user
-          = link_to edit_user_path, class: "top-items__icon-btn" do
-            = icon('fas', 'cog', class: icon)
+          = link_to edit_user_path(current_user), class: "top-items__icon-btn" do
+            = icon('fas', 'cog', class: 'icon')
 
   .groups
     .group
