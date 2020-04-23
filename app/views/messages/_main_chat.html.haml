@@ -2,11 +2,12 @@
   .main-header
     .main-header__left-box
       .main-header__left-box__current-group
-        グループ１
+        = @group.name
       .main-header__left-box__member-list
         Member:
         .main-header__left-box__member-list__member
-          yanai
+          - @group.users.each do |user|
+            = user.name
     
     .main-header__edit-btn
       = link_to "Edit", class: "edit-link-btn"
