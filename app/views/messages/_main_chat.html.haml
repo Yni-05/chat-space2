@@ -2,24 +2,25 @@
   .main-header
     .main-header__left-box
       .main-header__left-box__current-group
-        グループ１
+        = @group.name
       .main-header__left-box__member-list
         Member:
         .main-header__left-box__member-list__member
-          yanai
+          - @group.users.each do |user|
+            = user.name
     
     .main-header__edit-btn
-      = link_to "Edit", class: "edit-link-btn"
+      = link_to "Edit", edit_group_path(@group.id), class: "edit-link-btn"
 
   .messages
-    まだメッセージがありません
+    = render @messages
 
   .form
     .form__message
-      .form__mask
-        .form__mask__image
-          .icon
-          .hidden
-      .form__submit
-        Send
-
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
