@@ -6,7 +6,7 @@
       .side-header__box__menu
         .side-header__box__menu__new-group
           = link_to new_group_path, class: "top-items__icon-btn" do
-            = icon('fas', 'edit')
+            = icon('fas', 'edit', class: 'icon')
         .side-header__box__menu__edit-user
           = link_to edit_user_path(current_user), class: "top-items__icon-btn" do
             = icon('fas', 'cog', class: 'icon')
